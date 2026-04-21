@@ -119,18 +119,24 @@ function HeroSection() {
       <div className="relative z-10 flex flex-col gap-12">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6 text-balance">
-            <p className="label-chip text-white/60">{identity.name}</p>
             <motion.h1
               {...reveal}
-              className="ligature-play font-[var(--font-display)] text-4xl leading-[1.05] text-white md:text-6xl lg:text-7xl"
+              className="ligature-play font-[var(--font-display)] text-5xl leading-[1] text-white md:text-7xl lg:text-[5.5rem]"
             >
-              {identity.headline}
+              {identity.name}
             </motion.h1>
             <motion.p
               {...reveal}
-              transition={{ ...reveal.transition, delay: 0.15 }}
-              className="max-w-2xl text-lg text-white/70"
+              transition={{ ...reveal.transition, delay: 0.1 }}
+              className="max-w-2xl text-xl font-light tracking-wide text-white/80 md:text-2xl leading-snug"
               data-cursor="text"
+            >
+              {identity.headline}
+            </motion.p>
+            <motion.p
+              {...reveal}
+              transition={{ ...reveal.transition, delay: 0.15 }}
+              className="label-chip mt-2 text-white/40"
             >
               {identity.mission}
             </motion.p>
